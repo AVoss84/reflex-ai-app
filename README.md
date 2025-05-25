@@ -1,6 +1,6 @@
 # Chat assistant Web App
 
-A simple chat assistant web application built with [Reflex](https://reflex.dev/). It uses Gemini 2.5 Flash under the hood to answer user questions. For deployment, [see](https://reflex.dev/blog/2024-10-8-self-hosting-reflex-with-docker/).
+A simple chat assistant web application built with [Reflex](https://reflex.dev/). It uses Gemini 2.5 Flash under the hood to answer user questions. For deployment, [see blog](https://reflex.dev/blog/2024-10-8-self-hosting-reflex-with-docker/).
 
 ## Features
 
