@@ -1,6 +1,6 @@
-# Web App
+# Chat assistant Web App
 
-A simple chat assistant web application built with [Reflex](https://reflex.dev/).
+A simple chat assistant web application built with [Reflex](https://reflex.dev/). It uses Gemini 2.5 Flash under the hood to answer user questions.
 
 ## Features
 
@@ -8,15 +8,37 @@ A simple chat assistant web application built with [Reflex](https://reflex.dev/)
 - Clear chat history functionality
 - Responsive UI with custom styling
 
-
 ## Project Structure
 
-- `web_app/` - Main application code
-  - `web_app.py` - App entry point and UI components
-  - `style.py` - Styling definitions
-  - `state.py` - State management (not shown here)
-- `assets/` - Static files (e.g., logo images)
+```
+├── assets
+├── Dockerfile
+├── Makefile
+├── pyproject.toml
+├── README.md
+├── rxconfig.py
+└── web_app
+    ├── backend.py
+    ├── state.py
+    ├── style.py
+    └── web_app.py
+```
 
-## License
+## Package installation and application develoment
 
-© 2025 Nemetschek SE. All rights reserved.
+Create virtual environment: 
+```bash
+uv venv --python 3.12
+uv sync
+source .venv/bin/activate
+```
+
+Start app locally:
+```bash
+make ui       
+```
+
+Run formating: 
+```bash
+make format
+```
