@@ -1,5 +1,5 @@
 FROM python:3.12-slim
-EXPOSE 8000
+#EXPOSE 8000
 WORKDIR /app
 
 # # Install unzip and curl
