@@ -1,3 +1,7 @@
+.web
+*.db
+.states
+assets/external/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -172,3 +176,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+.web
+.python-version
+uv.lock
