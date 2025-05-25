@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+     - 8000:8000
+    image: backend:latest
+    platform: linux/amd64
+    # depends_on:
+    #  - redis
+    volumes:
+      - /Users/avosseler/.config/gcloud/application_default_credentials.json:/root/.config/gcloud/application_default_credentials.json
+
+  frontend:
+    build:
+      dockerfile: web.Dockerfile
+    ports:
+      - 3000:80
+    image: frontend:latest
+    platform: linux/amd64
+    depends_on:
+      - backend
+    volumes:
+      - /Users/avosseler/.config/gcloud/application_default_credentials.json:/root/.config/gcloud/application_default_credentials.json
+  # redis:
+  #   image: redis

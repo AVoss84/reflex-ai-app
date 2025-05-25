@@ -1,10 +1,10 @@
 a.PHONY: format up down rm-all ui api free-port
 
-LINT_FOLDER ?= src/my_package
+LINT_FOLDER ?= web_app
 
 # # For local streamlit server
 # STREAMLIT_HOST ?= 127.0.0.1
-FRONTEND_PORT ?= 8080
+FRONTEND_PORT ?= 3000
 
 format:
 	uv run mypy $(LINT_FOLDER)
@@ -12,7 +12,7 @@ format:
 
 # Start all services
 up:
-	docker compose up -d
+	docker compose up -d --build
 	
 down:
 	docker compose down --volumes --remove-orphans
